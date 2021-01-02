@@ -6,7 +6,7 @@ use cli::Opts;
 use config::use_config_or_opts;
 use info::{cpu, gpu, memory, os, packages, wm, x};
 use prettytable::{color, format, Attr, Cell, Row, Table};
-use util::Result;
+use util::{Result, check_if_archlinux};
 
 mod cli;
 mod config;
@@ -47,6 +47,7 @@ fn create_cell(name: &str, data: String) -> Row {
 }
 
 fn main() -> Result<()> {
+    let _ = check_if_archlinux();
     let opts: Opts = Opts::parse();
     let config = use_config_or_opts(&opts)?;
 
