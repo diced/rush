@@ -1,5 +1,11 @@
 [package]
-name = "rush"
+name = "rush-bin"
+description = "rust fetch = rush"
+licence = "MIT"
+licence-file = "LICENCE"
+documentation = "https://github.com/diced/rush"
+homepage = "https://github.com/diced/rush"
+repository = "https://github.com/diced/rush.git"
 version = "0.1.0"
 authors = ["diced <pranaco2@gmail.com>"]
 edition = "2018"
