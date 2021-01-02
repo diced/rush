@@ -1,8 +1,8 @@
 [package]
 name = "rush-bin"
 description = "rust fetch = rush"
-licence = "MIT"
-licence-file = "LICENCE"
+license = "MIT"
+license-file = "LICENCE"
 documentation = "https://github.com/diced/rush"
 homepage = "https://github.com/diced/rush"
 repository = "https://github.com/diced/rush.git"
