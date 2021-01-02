@@ -49,3 +49,10 @@ icons = false
 
 # using
 download the binary from [releases](https://github.com/diced/rush/releases)
+<br>**or**<br>
+install from [crates.io (rush-bin)](https://crates.io/crates/rush-bin/) with
+```sh
+cargo install rush-bin
+```
+
+Then run with `rush`
