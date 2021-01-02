@@ -6,7 +6,7 @@ license-file = "LICENSE"
 documentation = "https://github.com/diced/rush"
 homepage = "https://github.com/diced/rush"
 repository = "https://github.com/diced/rush.git"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["diced <pranaco2@gmail.com>"]
 edition = "2018"
 [[bin]]
