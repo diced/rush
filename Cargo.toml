@@ -2,7 +2,7 @@
 name = "rush-bin"
 description = "rust fetch = rush"
 license = "MIT"
-license-file = "LICENCE"
+license-file = "LICENSE"
 documentation = "https://github.com/diced/rush"
 homepage = "https://github.com/diced/rush"
 repository = "https://github.com/diced/rush.git"
