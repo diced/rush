@@ -19,6 +19,8 @@ pub struct Opts {
     #[clap(short, long, parse(try_from_str), default_value = "true")]
     pub wm: bool,
     #[clap(short, long, parse(try_from_str), default_value = "true")]
+    pub bar: bool,
+    #[clap(short, long, parse(try_from_str), default_value = "true")]
     pub resolution: bool,
     #[clap(short, long, parse(try_from_str), default_value = "true")]
     pub cpu: bool,

@@ -5,3 +5,4 @@ pub mod os;
 pub mod packages;
 pub mod wm;
 pub mod x;
+pub mod bar;

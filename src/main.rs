@@ -4,7 +4,7 @@ extern crate regex;
 use clap::Clap;
 use cli::Opts;
 use config::use_config_or_opts;
-use info::{cpu, gpu, memory, os, packages, wm, x};
+use info::{bar, cpu, gpu, memory, os, packages, wm, x};
 use prettytable::{color, format, Attr, Cell, Row, Table};
 use util::{Result, check_if_archlinux};
 
@@ -99,6 +99,10 @@ fn main() -> Result<()> {
         let wm = wm::get_wm_info()?;
         table.add_row(create_cell("wm", wm));
     }
+    if config.bar {
+        let bar = bar::get_bar()?;
+        table.add_row(create_cell("bar", bar));
+    }
     if config.resolution {
         let res = x::get_resolution()?;
         table.add_row(create_cell("res", res));
@@ -112,8 +116,10 @@ fn main() -> Result<()> {
         table.add_row(create_cell("mem", memory));
     }
     if config.gpu {
-        let gpu = gpu::get_gpu_info()?;
-        table.add_row(create_cell("gpu", gpu.join(", ")));
+        let gpus = gpu::get_gpu_info()?;
+        for gpu in gpus {
+            table.add_row(create_cell("gpu", gpu));
+        }
     }
     if config.theme {
         let gtk_theme = x::get_gtk_theme()?;
